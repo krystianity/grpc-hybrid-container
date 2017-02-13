@@ -1,0 +1,16 @@
+{
+  "name": "grpc-hybrid",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node ./node/index.js",
+    "clean": "cd cpp && make clean",
+    "make": "cd cpp && make async_server",
+    "compile": "npm run clean && npm run make",
+    "server": "./cpp/async_server",
+    "supervisor": "node ./supervisor/index.js"
+  },
+  "dependencies": {
+    "express": "~4.14.1",
+    "grpc": "~1.0.0"
+  }
+}
